@@ -1,0 +1,23 @@
+#popup{
+    flex:7;
+}
+.helpicon{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 40px;
+    margin-bottom: 40px;
+   
+}
+
+.closeicon{
+    right: 20;
+    top: 16;
+    margin-left: 80px;
+}
+
+.cardrow{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
