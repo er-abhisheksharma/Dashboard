@@ -1,5 +1,5 @@
 #popup{
-    flex:7;
+    flex:5;
 }
 .helpicon{
     position: fixed;
@@ -18,6 +18,28 @@
 
 .cardrow{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    white-space: nowrap;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
     
 }
+
+
+.title{
+    display: flex;
+    flex-direction: row;
+    margin: 40px 10px 40px 10px;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background-color: rgb(235, 233, 233);
+}
+
+.tagtext{
+    padding: 20px 20px;
+    color: aliceblue;
+    font-size: 20px;
+    background-color: rgb(57, 137, 241);
+}
+

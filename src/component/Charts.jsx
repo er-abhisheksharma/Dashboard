@@ -1,6 +1,6 @@
 import {React, PureComponent, Fragment} from 'react';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import { ComposedChart, XAxis, YAxis, Tooltip, Legend, CartesianGrid, Bar, Line } from 'recharts';
+import { ComposedChart, XAxis, YAxis, Tooltip, Legend, CartesianGrid, Bar, Line, ResponsiveContainer } from 'recharts';
 import './Charts.css'
 
 const data = [
@@ -166,10 +166,11 @@ const data = [
 class CustomizedAxisTick extends PureComponent {
   render() {
     const { x, y, payload } = this.props;
+    
 
     return (
       <g transform={`translate(${x},${y})`}>
-        <text x={10} y={0} dy={6} textAnchor="end" fill="#666666" transform="rotate(-15)">
+        <text x={0} y={0} dy={0} textAnchor="end" fill="#666666" transform="rotate(-60)">
           {payload.value}
         </text>
       </g>
@@ -178,24 +179,31 @@ class CustomizedAxisTick extends PureComponent {
 }
 
 function Charts() {
+    const options = {
+        maintainAspectRatio: false,
+        responsive: true,	// Don't maintain w/h ratio
+      }
     
   return(
-      <Fragment  >
+      <Fragment id="flex" >
         <div className="frag">
             <div className='chartheight'>       
-            <span id="charttext">Statics</span>  
-            <ComposedChart width={800} height={350} data={data} className="height">
-            <XAxis dataKey="name" tick={<CustomizedAxisTick />} />
-            <YAxis className='height'/>
+            <span id="charttext">Statics</span>
+            <ResponsiveContainer width="99%" height={400} >
+ 
+            <ComposedChart data={data} options={options}  margin={{ top: 20, right: 30, left: 0, bottom: 50 }}className="height">
+            <XAxis dataKey="name" tick={<CustomizedAxisTick />} padding={{ left: 10 }}/>
+            <YAxis label={{ value: 'Statics', angle: -90, position: 'insideLeft'}}/>
             <Tooltip/>
             <Legend iconSize={20} width={120} layout='vertical' verticalAlign='middle' align="right"/>
             <CartesianGrid stroke="#f5f5f5" />
-            <Bar dataKey="Clicks" barSize={20} fill="#c5c7c7" /><Bar dataKey="Conversion" barSize={20} fill="#3684eb" /><Bar dataKey="Earning" barSize={20} fill="#5c9632" />
+            <Bar dataKey="Clicks" barSize={10} fill="#c5c7c7" /><Bar dataKey="Conversion" barSize={10} fill="#3684eb" /><Bar dataKey="Earning" barSize={10} fill="#5c9632" />
             <Line type="monotone" dataKey="Clicks" stroke="#aceaf2" />
             </ComposedChart>
+            </ResponsiveContainer> 
         </div>
         <div className='chartside'>
-            <div className="charttext text"><span className="chartsidetext">CLICKS</span><HelpOutlineIcon/><br/>98,335</div>
+            <div className="charttext"><span className="chartsidetext">CLICKS</span><HelpOutlineIcon/><br/>98,335</div>
             <div className="charttext"><span className="chartsidetext">CONVERSIONS</span><HelpOutlineIcon/><br/>32</div>
             <div className="charttext"><span className="chartsidetext">EARNING</span><HelpOutlineIcon/><br/>$851.30</div>
 

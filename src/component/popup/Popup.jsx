@@ -28,15 +28,21 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   justifyContent: 'flex-start',
 }));
 
+
+
 export default function PersistentDrawerRight() {
   const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
+    
     setOpen(true);
+    document.getElementById("popup").style.marginRight = "15%";
+    document.getElementById("popup").style.width = "800px";
   };
 
   const handleDrawerClose = () => {
     setOpen(false);
+    document.getElementById("popup").style.marginRight = "0%";
   };
 
   return (
@@ -44,18 +50,24 @@ export default function PersistentDrawerRight() {
     <div id="popup"> 
 
     <Charts />
-    <div className='carddata'>
-    <div className='cardrow'>
-      <Card/>
-      <Card/>
+
+    <div className='title'>
+      <div className="tagtext">BROWSE CPA OFFERS</div>
+      <div className="tagtext">CPA OFFERS WALL</div>
+      <div className="tagtext">CPA EARNING STATS</div>
     </div>
+    <div className='carddata'>
+      <div className='cardrow'>
+        <Card/>
+        <Card/>
+      </div>
     <div className='cardrow'>
       <Card/>
       <Card/>
     </div>
     </div>
     
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex' }} id="Main">
 
           <Help  style={{ fontSize: 60}} className='helpicon' color="inherit"
             aria-label="open drawer"

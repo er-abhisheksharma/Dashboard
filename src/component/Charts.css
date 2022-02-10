@@ -1,8 +1,12 @@
+#flex{
+    flex: 9;
+}
 
 
 .frag{
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 #charttext{
@@ -18,20 +22,23 @@
 .chartside{
     width: 170px;
     font-size: 30px;
-    margin: 10px;
-    margin-top: 50px !important;
+    margin: 50px 10px 10px 0px;
     border: 1px solid whitesmoke;
 }
 .charttext{
     padding: 10px 10px;
+
     
 }
 
 .chartheight{
-    width: 66%;
+    width: 86%;
     margin-top: 50px !important;
+    margin-left: 10px;
 }
 .text{
     margin-top: 50px;
+    margin-right: 0px;
 }
+
 
