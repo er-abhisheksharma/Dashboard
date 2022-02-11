@@ -1,5 +1,6 @@
 #flex{
     flex: 9;
+    margin: 10px 30px ;
 }
 
 
@@ -11,7 +12,9 @@
 
 #charttext{
     margin-top: 50px;
-    margin-left: 50%;
+    margin-left: 44%;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .chartsidetext{
@@ -21,8 +24,9 @@
 
 .chartside{
     width: 170px;
+    height: 270px;
     font-size: 30px;
-    margin: 50px 10px 10px 0px;
+    margin: 130px 30px 30px 0px;
     border: 1px solid whitesmoke;
 }
 .charttext{
@@ -39,6 +43,23 @@
 .text{
     margin-top: 50px;
     margin-right: 0px;
+}
+.forma{
+    margin-left: 50px;
+    margin-bottom: 20px;
+    padding: 3px;
+    padding-right: 40px;
+    font-size: 12px;
+    
+}
+
+.btn{
+    padding: 5px 8px;
+    color: whitesmoke;
+    background-color: rgb(231, 174, 68);
+    border: none;
+    margin-left: 5%;
+    box-shadow: 2px 3px rgb(182, 178, 178);
 }
 
 

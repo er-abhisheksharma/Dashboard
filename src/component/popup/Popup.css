@@ -34,7 +34,7 @@
     margin: 40px 10px 40px 10px;
     justify-content: space-between;
     padding: 20px 50px;
-    background-color: rgb(235, 233, 233);
+    background-color: whitesmoke;
 }
 
 .tagtext{
@@ -44,3 +44,25 @@
     background-color: rgb(57, 137, 241);
 }
 
+.iframe{
+    margin: 10px 20px;
+}
+
+.info{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.maintitle{
+    color: rgb(57, 137, 241) ;
+    margin-top: 80px;
+    margin-left: 50px;
+}
+#submaintitle{
+    font-size: 13px !important;
+}
+
+#maintitle{
+    font-weight: 600;
+    font-size: 18px;
+}

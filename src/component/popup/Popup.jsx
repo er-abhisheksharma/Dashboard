@@ -2,19 +2,13 @@ import * as React from 'react';
 import { styled} from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import Close from '@mui/icons-material/Close';
 import Help from '@material-ui/icons/ContactSupport';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import './Popup.css';
 import Card from '../Card';
 import Charts from '../Charts';
-import Sidebar from '../sidebar/Sidebar';
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -48,8 +42,12 @@ export default function PersistentDrawerRight() {
   return (
 
     <div id="popup"> 
+    <div className='maintitle'>
+      <span id="maintitle">CPA DASHBOARD  </span>
+      <u id="submaintitle"> Switch to PPC Dashboard</u>
+    </div>
 
-    <Charts />
+    <Charts className='chart' />
 
     <div className='title'>
       <div className="tagtext">BROWSE CPA OFFERS</div>
@@ -86,32 +84,20 @@ export default function PersistentDrawerRight() {
         anchor="right"
         open={open}
       >
-        <DrawerHeader>
+        <DrawerHeader >
             <span>HELP VIDEO   <Close onClick={handleDrawerClose} className="closeicon"/>  </span>
           
         </DrawerHeader>
         <Divider />
-        <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
+        <iframe className='iframe' width="200" height="100" src="https://www.youtube.com/embed/21Ud1KMkNbo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
+        <div className='info'>
+          <span>CPA QUICK INFO</span><br/><br/>
+
+          <a href='www.google.com' target="_blank" className='infolink'> -: BROWSE OFFER</a><br/><br/>
+          <a href='www.google.com' target="_blank" className='infolink'> -: BROWSE OFFER</a><br/><br/>
+          <a href='www.google.com' target="_blank" className='infolink'> -: BROWSE OFFER</a>
+        </div>
       </Drawer>
     </Box>
     </div>

@@ -34,8 +34,16 @@
     margin-bottom: 20px;
   }
   
+  .sidebarprofileIcon{
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+
   .sidebarIcon {
     margin-right: 15px;
+    color: rgb(61, 154, 230);
   }
   
   .sidebarButton {
@@ -56,6 +64,46 @@
     margin: 0;
     list-style: none;
   }
+
+  .sidebarListItemTextt{
+    font-weight: 800;
+  }
+
+  .sidebarListItemTex{
+    font-weight: 500;
+  }
+  .arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  .down {
+    margin-left: 20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  .plus{
+    margin-left: 115px;
+    font-size: large;
+    font-weight: 500;
+  }
+  .plus1{
+    margin-left: 33px;
+    font-size: large;
+    font-weight: 500;
+  }
+  .plus2{
+    margin-left: 96px;
+    font-size: large;
+    font-weight: 500;
+  }
+  .plus3{
+    margin-left: 92px;
+    font-size: large;
+    font-weight: 500;
+  }
+  
   
   
   
